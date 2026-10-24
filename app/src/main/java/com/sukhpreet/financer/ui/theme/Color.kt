@@ -2,10 +2,15 @@ package com.sukhpreet.financer.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+val NeonGreen = Color(0xFF00FF66)
+val DarkGreen = Color(0xFF006629)
+val CyberEmerald = Color(0xFF0D2C1E)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val DarkBackground = Color(0xFF0B0F12)
+val SurfaceDark = Color(0xFF161C22)
+val TextWhite = Color(0xFFF0F4F8)
+val TextMuted = Color(0xFF8A99A8)
+
+val LightBackground = Color(0xFFF4F7F6)
+val SurfaceLight = Color(0xFFFFFFFF)
+val TextBlack = Color(0xFF0A100D)
