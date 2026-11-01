@@ -6,11 +6,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.sukhpreet.financer.view.components.FinanceBottomBar
 import com.sukhpreet.financer.view.components.FinancerTopBar
+import com.sukhpreet.financer.view.components.TransparentCard
 
 @Composable
 fun Dashboard(modifier: Modifier = Modifier) {
@@ -25,10 +25,7 @@ fun Dashboard(modifier: Modifier = Modifier) {
                 .padding(innerPadding)
                 .background(color = MaterialTheme.colorScheme.background)
         ) {
-            Text(
-                text = "Welcome to your Finance Dashboard screen details!",
-                color = MaterialTheme.colorScheme.onBackground
-            )
+            TransparentCard()
         }
     }
 }
