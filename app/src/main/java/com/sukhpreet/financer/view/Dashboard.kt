@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.sukhpreet.financer.view.components.FinanceBottomBar
 import com.sukhpreet.financer.view.components.FinancerTopBar
+import com.sukhpreet.financer.view.components.QuickActionsGrid
 import com.sukhpreet.financer.view.components.TransparentCard
 
 @Composable
@@ -26,6 +27,7 @@ fun Dashboard(modifier: Modifier = Modifier) {
                 .background(color = MaterialTheme.colorScheme.background)
         ) {
             TransparentCard()
+            QuickActionsGrid {  }
         }
     }
 }
