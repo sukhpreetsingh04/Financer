@@ -45,7 +45,6 @@ fun FinanceBottomBar(modifier: Modifier = Modifier) {
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Item 0: Home
                 Box(
                     modifier = Modifier
                         .size(52.dp)
@@ -64,8 +63,6 @@ fun FinanceBottomBar(modifier: Modifier = Modifier) {
                         )
                     }
                 }
-
-                // Item 1: Transactions
                 Box(
                     modifier = Modifier
                         .size(52.dp)
@@ -84,8 +81,6 @@ fun FinanceBottomBar(modifier: Modifier = Modifier) {
                         )
                     }
                 }
-
-                // Item 2: Settings
                 Box(
                     modifier = Modifier
                         .size(52.dp)
