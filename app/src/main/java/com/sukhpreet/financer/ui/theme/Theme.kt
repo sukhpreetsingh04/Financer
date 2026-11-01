@@ -5,27 +5,38 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
 private val FinancerColorScheme = lightColorScheme(
-    primary = AtmBlue,
+
+    // Primary Brand
+    primary = FinancerGreen,
     onPrimary = SurfaceLight,
-    primaryContainer = AtmBlueTint,
-    onPrimaryContainer = AtmBlueDeep,
+    primaryContainer = FinancerGreenLight,
+    onPrimaryContainer = FinancerGreenDark,
 
-    secondary = DarkGreen,
-    onSecondary = SurfaceLight,
-    secondaryContainer = CyberEmerald,
-    onSecondaryContainer = DarkGreen,
+    // Secondary Accent
+    secondary = MintAccent,
+    onSecondary = TextPrimary,
+    secondaryContainer = MintLight,
+    onSecondaryContainer = FinancerGreenDark,
 
+    // Scaffold
     background = Background,
-    onBackground = TextBlack,
+    onBackground = TextPrimary,
 
     surface = SurfaceLight,
-    onSurface = TextBlack,
-    surfaceVariant = AtmBlueTint,
-    onSurfaceVariant = TextMuted,
+    onSurface = TextPrimary,
 
+    surfaceVariant = SurfaceVariant,
+    onSurfaceVariant = TextSecondary,
+
+    // Borders
     outline = BorderLight,
+
+    // Status Colors
     error = ExpenseRed,
-    onError = SurfaceLight
+    onError = SurfaceLight,
+
+    tertiary = IncomeGreen,
+    onTertiary = SurfaceLight
 )
 
 @Composable
