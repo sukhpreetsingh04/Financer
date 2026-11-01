@@ -1,7 +1,6 @@
 package com.sukhpreet.financer.view.components
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -19,21 +18,16 @@ import androidx.compose.ui.Modifier
 fun FinancerTopBar(modifier: Modifier = Modifier) {
     TopAppBar(
         modifier = modifier,
-        title = { Text(text = "Hello User", style = MaterialTheme.typography.titleMedium) },
+        title = { Text(text = "Good Morning, User \uD83D\uDC4B", style = MaterialTheme.typography.titleLarge) },
         actions = {
             IconButton(onClick = { /*TODO*/ }) {
                 Icon(imageVector = Icons.Default.Search, contentDescription = "Search")
             }
             IconButton(onClick = { /*TODO*/ }) {
                 Icon(
-                    imageVector = Icons.Default.Notifications,
-                    contentDescription = "Notifications"
+                    imageVector = Icons.Default.Person,
+                    contentDescription = "User"
                 )
-            }
-        },
-        navigationIcon = {
-            IconButton(onClick = { /*TODO*/ }) {
-                Icon(imageVector = Icons.Default.Person, contentDescription = "User")
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
