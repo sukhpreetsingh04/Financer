@@ -12,13 +12,22 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import java.util.Calendar
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FinancerTopBar(modifier: Modifier = Modifier) {
+fun FinancerTopBar(
+    modifier: Modifier = Modifier,
+    currentHour: Int = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
+) {
     TopAppBar(
         modifier = modifier,
-        title = { Text(text = "Good Morning, User \uD83D\uDC4B", style = MaterialTheme.typography.titleLarge) },
+        title = {
+            Text(
+                text = "${greetingForHour(currentHour)}, User \uD83D\uDC4B",
+                style = MaterialTheme.typography.titleLarge
+            )
+        },
         actions = {
             IconButton(onClick = { /*TODO*/ }) {
                 Icon(imageVector = Icons.Default.Search, contentDescription = "Search")
@@ -37,4 +46,11 @@ fun FinancerTopBar(modifier: Modifier = Modifier) {
             navigationIconContentColor = MaterialTheme.colorScheme.primary
         )
     )
+}
+
+
+fun greetingForHour(hour: Int): String = when (hour) {
+    in 0..11 -> "Good morning"
+    in 12..16 -> "Good afternoon"
+    else -> "Good evening"
 }
