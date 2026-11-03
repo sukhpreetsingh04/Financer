@@ -26,7 +26,7 @@ fun FinancerTopBar(
         modifier = modifier,
         title = {
             Text(
-                text = "${greetingForHour(currentHour)}, User 👋",
+                text = "${greetingForHour(currentHour)}, User",
                 style = MaterialTheme.typography.titleLarge
             )
         },
