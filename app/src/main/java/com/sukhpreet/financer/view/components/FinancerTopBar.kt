@@ -18,24 +18,30 @@ import java.util.Calendar
 @Composable
 fun FinancerTopBar(
     modifier: Modifier = Modifier,
-    currentHour: Int = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
+    currentHour: Int = Calendar.getInstance()
+        .get(Calendar.HOUR_OF_DAY),
+    onProfileClick: () -> Unit = {}
 ) {
     TopAppBar(
         modifier = modifier,
         title = {
             Text(
-                text = "${greetingForHour(currentHour)}, User \uD83D\uDC4B",
+                text = "${greetingForHour(currentHour)}, User 👋",
                 style = MaterialTheme.typography.titleLarge
             )
         },
         actions = {
-            IconButton(onClick = { /*TODO*/ }) {
-                Icon(imageVector = Icons.Default.Search, contentDescription = "Search")
+            IconButton(onClick = { /* TODO */ }) {
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    contentDescription = "Search"
+                )
             }
-            IconButton(onClick = { /*TODO*/ }) {
+
+            IconButton(onClick = onProfileClick) {
                 Icon(
                     imageVector = Icons.Default.Person,
-                    contentDescription = "User"
+                    contentDescription = "User Profile"
                 )
             }
         },
@@ -47,7 +53,6 @@ fun FinancerTopBar(
         )
     )
 }
-
 
 fun greetingForHour(hour: Int): String = when (hour) {
     in 0..11 -> "Good morning"
