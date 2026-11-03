@@ -38,6 +38,8 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.compose.foundation.layout)
+    implementation(libs.androidx.compose.runtime)
     implementation(libs.room)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
