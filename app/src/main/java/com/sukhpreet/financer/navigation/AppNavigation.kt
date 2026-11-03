@@ -16,6 +16,7 @@ import com.sukhpreet.financer.view.UserProfile
 import com.sukhpreet.financer.view.Settings
 import com.sukhpreet.financer.view.components.FinancerTopBar
 import com.sukhpreet.financer.view.components.FinanceBottomBar
+import com.sukhpreet.financer.view.presentation.SplashScreen
 
 @Composable
 fun AppNavigation() {
@@ -62,6 +63,10 @@ fun AppNavigation() {
             startDestination = Screen.Dashboard.route,
             modifier = Modifier.padding(innerPadding)
         ) {
+
+            composable("Splashscreen") {
+                SplashScreen(navController)
+            }
 
             composable(Screen.Dashboard.route) {
                 Dashboard()
