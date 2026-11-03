@@ -35,7 +35,8 @@ fun TransparentCard() {
     ) {
         Card(
             modifier = Modifier
-                .fillMaxWidth(0.9f)
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp)
                 .wrapContentHeight(),
             shape = RoundedCornerShape(24.dp),
             colors = CardDefaults.cardColors(
